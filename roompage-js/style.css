@@ -1,0 +1,169 @@
+body {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.mobile {
+  display: none;
+}
+
+.imgs {
+  width: 100%;
+}
+p {
+  line-height: 19px;
+  color: hsl(0, 0%, 63%);
+}
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.opac {
+  opacity: 0.6;
+}
+.flow {
+  overflow-y: hidden;
+}
+.nav-links {
+  background-image: url("./images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.links a {
+  color: white;
+}
+
+.links a:hover {
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid white;
+}
+
+.opened p span a:hover {
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid black;
+}
+
+.seek-btn {
+  background-color: black;
+  width: 115px;
+  margin-top: 2rem;
+}
+
+.seek-btn img {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: ease-in 0.5s;
+}
+.seek-btn img:hover {
+  background-color: hsl(0, 0%, 27%);
+}
+.desk-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  flex-basis: 63%;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+.nav-links p {
+  margin: 2.5rem;
+  word-spacing: 1.5rem;
+}
+.links span {
+  padding: 13px;
+  font-size: 1rem;
+}
+.links img {
+  width: 6rem;
+}
+.desk-discover {
+  flex-basis: 37%;
+}
+.disc-texts {
+  padding: 4.5rem 3.8rem;
+}
+.desk-discover h1 {
+  font-size: 40px;
+}
+.shop {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  display: flex;
+  word-spacing: 0.6rem;
+  margin-top: 2rem;
+}
+.shop:hover {
+  color: hsl(0, 0%, 63%);
+}
+
+.shop:hover svg path {
+  fill: hsl(0, 0%, 63%);
+}
+
+.arrow {
+  margin-left: 1rem;
+}
+
+.desk {
+  display: flex;
+}
+.desk-future-texts {
+  flex-basis: 40%;
+  padding: 2rem;
+}
+.desk-future-texts h1,
+.future-texts h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
+}
+
+@media screen and (max-width: 560px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  #open,
+  #close {
+    cursor: pointer;
+  }
+  header .mobile {
+    background-image: url(./images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  nav {
+    padding: 2.5rem 2rem 30rem 2rem;
+  }
+  .menu-opened {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+  }
+  .opened {
+    display: flex;
+    justify-content: space-between;
+  }
+}
