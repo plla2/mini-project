@@ -3,7 +3,7 @@ let menuOpened = document.querySelector(".menu-opened"),
   closeMenuBtn = document.getElementById("close"),
   prevBtn = document.querySelectorAll(".prev"),
   nextBtn = document.querySelectorAll(".next"),
-  background = document.querySelector(".background"),
+  background = document.querySelectorAll(".background"),
   headerTexts = document.querySelectorAll(".header-texts"),
   headerHOne = document.querySelectorAll(".h1-header"),
   header = document.querySelector("header"),
@@ -42,7 +42,36 @@ nextBtn.forEach((next) => {
   });
 });
 
+prevBtn.forEach((prev) => {
+  prev.addEventListener("click", () => {
+    prevSlide();
+  });
+});
+
+body.addEventListener("keydown", (e) => {
+  e = e || window.Event;
+  if (e.key === "ArrowLeft") {
+    prevSlide();
+  } else if (e.key === "ArrowRight") {
+    nextSlide();
+  }
+});
+
+openMenuBtn.addEventListener("click", () => {
+  menuOpened.classList.toggle("show");
+  header.classList.toggle("opac");
+  main.classList.toggle("opac");
+  body.classList.toggle("flow");
+});
+
+closeMenuBtn.addEventListener("click", () => {
+  menuOpened.classList.toggle("show");
+  header.classList.toggle("opac");
+  main.classList.toggle("opac");
+  body.classList.toggle("flow");
+});
 function nextSlide() {
+  console.log("next");
   if (screen.width > "560") {
     if (counta >= desktopPics.length - 1) return;
     counta++;
@@ -60,7 +89,48 @@ function nextSlide() {
   countb++;
   headerHOne.forEach((hone) => (hone.innerHTML = hOneTexts[countb]));
 
-  if (countc >= headerTexts.length - 1) return;
+  if (countc >= headersTexts.length - 1) return;
   countc++;
   headerTexts.forEach((texts) => (texts.innerHTML = headersTexts[countc]));
+}
+
+function prevSlide() {
+  console.log("prev");
+  if (screen.width > "560") {
+    if (counta <= desktopPics.length && counta > 0) {
+      counta--;
+      background.forEach((back) => {
+        back.style.backgroundImage = desktopPics[counta];
+      });
+    } else {
+      return;
+    }
+  } else {
+    if (counta <= mobilePics.length && counta > 0) {
+      counta--;
+      background.forEach((back) => {
+        back.style.backgroundImage = mobilePics[counta];
+      });
+    } else {
+      return;
+    }
+  }
+
+  if (countb <= hOneTexts.length - 1 && countb > 0) {
+    countb--;
+    headerHOne.forEach((hone) => {
+      hone.innerHTML = hOneTexts[countb];
+    });
+  } else {
+    return;
+  }
+
+  if (countc <= headersTexts.length - 1 && countc > 0) {
+    countc--;
+    headerTexts.forEach((texts) => {
+      texts.innerHTML = headersTexts[countc];
+    });
+  } else {
+    return;
+  }
 }

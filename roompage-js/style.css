@@ -166,4 +166,22 @@ a {
     display: flex;
     justify-content: space-between;
   }
+  .opened img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .opened p {
+    padding: 1rem;
+  }
+
+  .opened a {
+    color: hsl(0, 0%, 63%);
+    padding: 1rem;
+  }
+  .opened a:hover {
+    padding-bottom: 0.6rem;
+    border-bottom: 3px solid hsl(0, 0%, 63);
+  }
 }
