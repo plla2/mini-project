@@ -1,0 +1,91 @@
+.landing-page.sing-up {
+  background-image: none;
+  height: 100vh;
+}
+.landing-page.sing-up::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  right: 0;
+  background-color: var(--a--2);
+  background-image: url(../assets/sign-up/bg-pattern-side.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -999;
+}
+/* sing up form */
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: var(--n--3);
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+  border-radius: 1.3rem;
+  min-width: 44.5rem;
+}
+.sign-up-form input,
+.sign-up-form select {
+  mix-blend-mode: normal;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.5);
+  height: 4.5rem;
+  margin-bottom: 2.4rem;
+  padding-left: 1.6rem;
+}
+.sign-up-form select {
+  background-image: url("../assets/sign-up/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  appearance: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--a--1);
+}
+select::content {
+  font-weight: 700;
+}
+.sign-up-form input::placeholder {
+  color: rgba(116, 123, 149, 0.5);
+}
+.sign-up-form .price {
+  color: var(--a--1);
+}
+.sign-up-form .btn {
+  width: 100%;
+  border: none;
+  background-color: var(--p--1);
+  color: var(--n--3);
+}
+.sign-up-form .btn:hover {
+  background-color: var(--p--2);
+}
+
+@media screen and (max-width: 960px) {
+  .landing-page.sing-up {
+    height: fit-content;
+  }
+  .landing-page.sing-up .landing-content {
+    flex-direction: column;
+    margin-top: 10.4rem;
+    text-align: center;
+    gap: 0;
+  }
+  .landing-page.sing-up::after {
+    bottom: 0;
+    height: 30%;
+    width: 100%;
+  }
+  .landing-page.sing-up .description {
+    margin-bottom: 6.4rem;
+  }
+  .sign-up-form {
+    margin-bottom: 12.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sign-up-form {
+    min-width: 32.7rem;
+  }
+}
