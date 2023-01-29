@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/sign-up.css" />
+  </head>
+  <body>
+    <section class="landing-page sign-up">
+      <header class="main-header container">
+        <a href="index.html" class="logo"
+          ><img src="assets/shared/logo.svg" alt="logo"
+        /></a>
+      </header>
+      <div class="landing-content container">
+        <div class="description">
+          <h1>Work smarter. Save time.</h1>
+          <p class="text">
+            Work smarter. Save time. Easily manage your projects. Get on the
+            list and receive in-app perks available only to early subscribers.
+            We are moving into final development and getting ready for official
+            launch soon.
+          </p>
+          <div class="coming-event light">
+            <div class="timer">
+              <h3>Coming <span>1 Jan 2023</span></h3>
+              <div class="time">
+                <div class="days">
+                  <span>0</span>
+                  <p>days</p>
+                </div>
+                <div class="hours">
+                  <span>0</span>
+                  <p>hours</p>
+                </div>
+                <div class="min">
+                  <span>0</span>
+                  <p>min</p>
+                </div>
+                <div class="sec">
+                  <span>0</span>
+                  <p>sec</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="#" class="sign-up-form">
+          <input type="text" id="name" name="Name" placeholder="Name" />
+          <input
+            type="text"
+            id="email"
+            placeholder="Email Address"
+            autocomplete="email"
+          />
+          <select name="Plan" id="plan-type">
+            <option value="basic">
+              <strong> Basic Pack </strong><span>Free</span>
+            </option>
+            <option value="pro">Pro Pack <span>$9.99</span></option>
+            <option value="ultimate">Ultimate Pack <span>$19.99</span></option>
+          </select>
+          <input type="text" name="Phone" id="phone" placeholder="Phone" />
+          <input
+            type="text"
+            name="Company"
+            id="company"
+            placeholder="Company"
+          />
+          <input type="submit" value="Got on the list" class="btn" />
+        </form>
+      </div>
+    </section>
+    <script src="src/script.js"></script>
+  </body>
+</html>

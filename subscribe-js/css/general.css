@@ -1,0 +1,228 @@
+:root {
+  --p--1: #5175ff;
+  --p--2: #829cff;
+  --a--1: #333950;
+  --a--2: #25293a;
+  --n--1: #747b95;
+  --n--2: #f05b5b;
+  --n--3: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+input,
+select {
+  border: none;
+}
+.landing-page {
+  position: relative;
+  background-image: url(/assets/home/bg-pattern-header.svg);
+  background-size: 460px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+}
+.container {
+  width: clamp(32.8rem, 90%, 111rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.main-header {
+  align-self: start;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.landing-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+.description {
+  flex: 1;
+}
+
+.description h1 {
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  color: var(--a--1);
+  margin-bottom: 2.4rem;
+}
+.description .text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: var(--n--1);
+  margin-bottom: 3.2rem;
+}
+@media screen and (max-width: 900px) {
+  .landing-page .description h1 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .landing-page .description p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .landing-page .main-header {
+    justify-content: center;
+  }
+  .landing-page .landing-content {
+    flex-direction: column;
+  }
+  .landing-page .description {
+    text-align: center;
+  }
+  .landing-page .description h1 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  width: 17.1rem;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.get-started.btn {
+  background-color: var(--p--1);
+  color: var(--n--3);
+  box-shadow: 0 2.5rem 2.5rem -1rem rgba(81, 117, 255, 0.35);
+}
+.get-started.btn:hover {
+  background-color: var(--p--2);
+}
+
+.coming-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coming-event .timer h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: var(--n--3);
+}
+.coming-event .timer h3 span {
+  color: var(--p--1);
+  font-size: 1.6rem;
+}
+
+.coming-event .time {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.coming-event .time div {
+  background-color: var(--a--1);
+  border-radius: 1.3rem;
+  padding: 1.7rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-event .timer span {
+  color: var(--n--3);
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 48px;
+}
+.coming-event .timer p {
+  color: var(--n--3);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.coming-event.light .time div {
+  color: var(--p--1);
+  background-color: rgba(81, 117, 255, 0.1);
+  border-radius: 0.4rem;
+}
+.coming-event.light .time div span {
+  color: var(--p--1);
+}
+.coming-event.light .time div p,
+.coming-event.light h3 {
+  color: var(--a--1);
+}
+
+.invalidInput {
+  background-image: url(../assets/sign-up/icon-cross.svg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  border-color: var(--n--2) !important;
+  outline-color: var(--n--2) !important;
+  color: var(--n--2) !important;
+}
+
+.invalidInput::placeholder {
+  color: var(--n--2) !important;
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .coming-event {
+    flex-direction: column;
+  }
+  .coming-event .timer {
+    margin-bottom: 4.8rem;
+  }
+  .coming-event .time div {
+    width: 8.2rem;
+  }
+  .coming-event .timer h3 {
+    text-align: center;
+  }
+  .coming-event .timer span {
+    font-size: 3.2rem;
+  }
+  .coming-event .timer p {
+    font-size: 1.2rem;
+  }
+  .coming-event .time {
+    gap: 1.3rem;
+  }
+}
