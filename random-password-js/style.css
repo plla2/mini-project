@@ -37,6 +37,7 @@ body {
   border: 1px solid gray;
   background-color: #ecf9ff;
   border-radius: 4px;
+  letter-spacing: 1.4px;
   padding: 0 2.8rem 0 1rem;
   color: black;
 }
@@ -65,6 +66,19 @@ body {
   width: 50%;
   background: #ffea20;
   border-radius: inherit;
+  transition: width 0.3s ease;
+}
+.pass-indicator#weak::before {
+  width: 20%;
+  background: #e64a4a;
+}
+.pass-indicator#medium::before {
+  width: 50%;
+  background: #f1c80b;
+}
+.pass-indicator#strong::before {
+  width: 100%;
+  background: #4285f4;
 }
 .pass-length {
   margin: 1.5rem 0 1.25rem;
