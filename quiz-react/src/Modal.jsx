@@ -1,7 +1,6 @@
 import React from "react";
 
-function Modal() {
-  return <div></div>;
+const Modal =()=>{
+  const { isModalOpen,}
 }
-
-export default Modal;
+export default Modal
