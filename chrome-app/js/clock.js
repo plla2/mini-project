@@ -1,7 +1,12 @@
 const clock = document.querySelector("h2#clock");
 
-function sayHello() {
-  console.log("hello");
-}
+function getClock() {
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
 
-setInterval(sayHello, 5000); // setInterval은 (실행하고자하는 함수, 호출주기)
+  clock.innerText = `${hours}:${minutes}:${seconds}`;
+}
+getClock();
+setInterval(getClock, 1000);
